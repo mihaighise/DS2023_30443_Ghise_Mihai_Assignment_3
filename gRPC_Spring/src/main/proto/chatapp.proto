@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.example.demo.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.grpc";
+
+message ChatMessage {
+  string from = 1;
+  string to = 2;
+  string msg = 3;
+}
+
+message CustomUser {
+  string username = 1;
+}
+
+message Empty {}
+
+service ChatService {
+  rpc sendMsg(ChatMessage) returns (Empty) {}
+  rpc receiveMsg(CustomUser) returns (stream ChatMessage) {}
+}

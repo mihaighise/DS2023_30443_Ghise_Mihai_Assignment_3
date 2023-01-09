@@ -65,11 +65,11 @@
 
 	<build>
 		<extensions>
-<!--			<extension>-->
-<!--				<groupId>kr.motd.maven</groupId>-->
-<!--				<artifactId>os-maven-plugin</artifactId>-->
-<!--				<version>1.6.2</version>-->
-<!--			</extension>-->
+			<extension>
+				<groupId>kr.motd.maven</groupId>
+				<artifactId>os-maven-plugin</artifactId>
+				<version>1.7.0</version>
+			</extension>
 		</extensions>
 		<plugins>
 			<plugin>
@@ -82,9 +82,9 @@
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<version>0.6.1</version>
 				<configuration>
-					<protocArtifact>com.google.protobuf:protoc:3.21.7:exe:windows-x86_64</protocArtifact>
+					<protocArtifact>com.google.protobuf:protoc:3.21.7:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
-					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.51.0:exe:windows-x86_64</pluginArtifact>
+					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.51.0:exe:${os.detected.classifier}</pluginArtifact>
 				</configuration>
 				<executions>
 					<execution>

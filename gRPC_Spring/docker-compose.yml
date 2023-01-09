@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  tomcat-db-api:
+    image: grpc_be
+    ports:
+       - "9090:9090"
+    

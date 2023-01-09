@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  tomcat-db-api:
+    image: assignment1
+    ports:
+       - "9090:9090"
+    
